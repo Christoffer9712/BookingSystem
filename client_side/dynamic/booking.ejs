@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/booking/booking.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="firstDiv">
+        <button onclick="newDay(-1)" class="btn">Previous day</button>
+        <h1 id="headerBooking"> Day Month Year</h1>
+        <button onclick="newDay(1)" class="btn">Next day</button>
+    </div>
+    <button onclick="logout()" id="logout" class="btn"><%= buttonText %></button>
+    <button onclick="location.href='/calendar/'"  id="toCal" class="btn">Calendar</button>
+    <hr>
+    
+    <form id="form">
+        <b>Start time:</b><input type="time" id=startTime name="startTime" value="17:00" required>
+        <b>End time:</b><input type="time" id="endTime" name="endTime" value="19:00" required>
+        <br> <br>
+        <b>Description: </b> <input list="activities" name="description" id="desc" required> 
+        <datalist id="activities">
+            <option>Gym</option>
+            <option>Bike</option>
+            <option>Trampoline</option>
+            <option>Pingis</option>
+            <option>Trampoline</option>
+            <option>Loft</option>
+            <option>Visitors</option>
+            <option>Entire barn</option>
+        </datalist>
+
+        <input type="hidden" name="day" id="day">
+        <input type="hidden" name="month" id="month">
+        <input type="hidden" name="year" id="year">
+        <br> <br> <br>
+        <input type="submit" id="submit" value="Submit Booking" onclick ="mySendData()" class="btn">
+    </form>
+    <div id="msg">
+        <%= message%>
+    </div>
+    
+    <hr>
+    <%bookingList.forEach(booking => {%>
+            <div id="booking">
+                <button id="btn" onclick="myDelete('<%= booking.id %>')">Delete booking</button>
+                <p id="time"><%= booking.startTime[0] %>:<%= booking.startTime[1] %> - <%= booking.endTime[0] %>:<%= booking.endTime[1] %></p>
+                <p>Booked by: <%= booking.user %></p>
+                <br>
+                <p><%= booking.message %></p>
+            </div>
+    <%})%>
+        
+
+    <script src="../booking/booking.js" charset="utf-8"></script>
+</body>
+</html>

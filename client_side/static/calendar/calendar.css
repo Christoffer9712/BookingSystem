@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+}
+
+#logout{
+    position:absolute;
+    right: 10px;
+    top: 10px;
+}
+#toHome{
+    position:absolute;
+    left: 10px;
+    top: 10px;
+}
+.title{
+    color: blue;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.btn_div{
+    justify-content: center;
+    text-align: center;
+}
+.btn_div p{
+    display: inline-block;
+    text-align: center;
+    font-size: 150%;
+}
+#prevMonth{
+    display: inline-block;
+    text-align: center;
+
+}
+#nextMonth{
+    display: inline-block;
+    text-align: center;
+}
+
+.table{
+    background-color: white;
+    display: inline-block;
+    margin: 40px 0px;
+    border: 2px solid black;
+}
+.table th{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+
+.dateBtn{
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    font-size:120%;
+    background-color: white;
+    border: 0px;
+    transition: 0.4s;
+}
+.dateBtn:hover{
+    cursor:pointer;
+    background-color: lightgrey;
+}
+
+.btn{
+    display: inline-block;
+    background-color: aqua;
+    border: 1px solid blue;
+    margin: 0;
+    padding: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(94, 176, 231);
+}

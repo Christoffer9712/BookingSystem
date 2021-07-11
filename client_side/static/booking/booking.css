@@ -1,0 +1,75 @@
+body{
+    background-color: lightblue;
+}
+#firstDiv{
+    color: blue;
+    text-align: center;
+}
+#headerBooking{
+    text-align: center;
+    margin: 40px 15%;
+    display: inline-block;
+}
+#logout{
+    position:absolute;
+    right: 10px;
+    top: 10px;
+}
+#toCal{
+    position:absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#booking{
+    padding: 0px;
+    text-align: center;
+    border: 1px solid blue;
+    background-color: aqua;
+    font-weight: bold;
+    color: blue;
+    margin: 5px;
+    padding: 5px;
+}
+#time{
+    margin: 0px;
+    font-size: 200%;
+}
+#btn{
+    position: absolute;
+    right: 15px;
+    border: 1px solid black;
+}
+#btn:hover{
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+#startTime{
+    width: 9%;
+}
+#endTime{
+    width: 9%;
+}
+#form{
+    color:blue;
+}
+
+#msg{
+    text-align: center;
+    color:red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: aqua;
+    border: 1px solid blue;
+    margin: 0;
+    padding: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(94, 176, 231);
+}
